@@ -1,4 +1,4 @@
-def printar_obj(obj):
+def print_obj(obj):
     print("main",obj.publication_number,"\n",
             obj.application_number,"\n",
             obj.filing_date,"\n",
@@ -13,7 +13,7 @@ def printar_obj(obj):
             # obj.classifications[0].code,obj.classifications[0].year,obj.classifications[0].description,"\n",
             # obj.international_applications[0].application_type,obj.international_applications[0].number,obj.international_applications[0].date,obj.international_applications[0].authority
     )
-    printar_ot(obj.parties)
-def printar_ot(list):
+    print_ot(obj.parties)
+def print_ot(list):
     for party in list:
         print(party.name,party.role,party.country)

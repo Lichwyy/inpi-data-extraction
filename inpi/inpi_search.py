@@ -1,4 +1,4 @@
-from correto.inpi_client import INPIClient
+from inpi.inpi_client import INPIClient
 
 class INPISearch:
     def __init__(self, client:INPIClient):

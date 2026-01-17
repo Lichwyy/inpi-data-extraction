@@ -1,7 +1,7 @@
-from correto.inpi_client import INPIClient
-from correto.inpi_detail_service import INPIDetailService
-from correto.inpi_parser import INPIParser
-from correto.inpi_search import INPISearch
+from inpi.inpi_client import INPIClient
+from inpi.inpi_detail_service import INPIDetailService
+from inpi.inpi_parser import INPIParser
+from inpi.inpi_search import INPISearch
 from utils.file_manager import FileManager
 from pathlib import Path
 
