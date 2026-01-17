@@ -19,7 +19,7 @@ pipenv run python main.py
 
 ## Seções do projeto
 - `main.py`: fluxo principal de consulta e parsing.
-- `correto/`: cliente HTTP, busca, detalhe e parsing da resposta do INPI.
+- `inpi/`: cliente HTTP, busca, detalhe e parsing da resposta do INPI.
 - `models/`: modelos de dados (Patent, Priority, Classification, InternationalApplication, Party).
 - `persistence/`: controle de IDs enviados/não enviados.
 - `patents_ids/`: arquivos de entrada e saída de IDs.
@@ -36,7 +36,7 @@ pipenv run python main.py
   ```
   A função não retorna o HTML atualizado; se precisar do conteúdo após reautenticar, repita a busca e use o retorno.
 
-### correto/inpi_client.py
+### inpi/inpi_client.py
 - `INPIClient()`: cria uma sessão e carrega `login`/`pass` do ambiente.
 - `authenticate()`: autentica no INPI para liberar requisições.
   ```python
@@ -45,21 +45,21 @@ pipenv run python main.py
   ```
 - `expired_session(response: str) -> bool`: indica se a resposta aponta para sessão expirada.
 
-### correto/inpi_search.py
+### inpi/inpi_search.py
 - `INPISearch.search_by_number(numero: str) -> str`: busca pelo número do pedido e retorna HTML.
   ```python
   search = INPISearch(client)
   html = search.search_by_number("BR102022000001")
   ```
 
-### correto/inpi_detail_service.py
+### inpi/inpi_detail_service.py
 - `INPIDetailService.get_data(codPedido: str) -> str`: obtém o HTML detalhado do pedido.
   ```python
   detail = INPIDetailService(client)
   html = detail.get_data("123456789")
   ```
 
-### correto/inpi_parser.py
+### inpi/inpi_parser.py
 - `parser_cod_pedido(html: str) -> list[str]`: extrai `CodPedido` do HTML de busca.
 - `extract_inid_text(soup, inid_code) -> str | None`: localiza o texto de um código INID.
 - `parser_detail(html: str) -> Patent`: parseia o HTML detalhado e retorna um `Patent` completo.
@@ -98,5 +98,5 @@ pipenv run python main.py
   ```
 
 ### utils/random.py
-- `printar_obj(obj)`: imprime campos principais de um objeto `Patent`.
-- `printar_ot(list)`: imprime nome/role/país para cada `Party`.
+- `print_obj(obj)`: imprime campos principais de um objeto `Patent`.
+- `print_ot(list)`: imprime nome/role/país para cada `Party`.
