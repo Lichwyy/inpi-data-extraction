@@ -33,6 +33,7 @@ pipenv run python main.py
   html = inpisearch.search_by_number(numero)
   reauthenticate(html, inpisearch, numero)
   ```
+  A função não retorna o HTML atualizado; se precisar do conteúdo após reautenticar, repita a busca.
 
 ### correto/inpi_client.py
 - `INPIClient()`: cria uma sessão e carrega `login`/`pass` do ambiente.
