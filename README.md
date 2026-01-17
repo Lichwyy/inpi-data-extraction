@@ -32,7 +32,7 @@ pipenv run python main.py
   ```python
   html = inpisearch.search_by_number(numero)
   reauthenticate(html, inpisearch, numero)
-  html = inpisearch.search_by_number(numero)
+  updated_html = inpisearch.search_by_number(numero)
   ```
   A função não retorna o HTML atualizado; se precisar do conteúdo após reautenticar, repita a busca e use o retorno.
 
