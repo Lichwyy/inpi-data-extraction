@@ -68,4 +68,4 @@ Se precisar do HTML após reautenticação, execute a busca novamente com `searc
 
 ## Observações
 - O código depende das credenciais do INPI para funcionar corretamente.
-- Não há suíte de testes configurada no repositório atualmente.
+- Não há suite de testes configurada no repositório atualmente.
