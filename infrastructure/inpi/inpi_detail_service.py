@@ -1,16 +1,13 @@
-from inpi.inpi_client import INPIClient
+from infrastructure.inpi.inpi_client import INPIClient
 
-class INPISearch:
+class INPIDetailService:
     def __init__(self, client:INPIClient):
         self.client = client
     
-    def search_by_number(self, numero:str):
+    def get_data(self, codPedido:str):
         params = {
-            "Action": "SearchBasico",
-            "NumPedido": numero,
-            "FormaPesquisa": "todasPalavras",
-            "Coluna": "Titulo",
-            "RegisterPerPage": "20"
+            "Action": "Detail",
+            "CodPedido": codPedido
         }
         r= self.client.session.get(self.client.base_url+"servlet/PatenteServletController",
                           params=params

@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
 import re
-from models.models import Patent, Classification, Priority, InternationalApplication, Party
+from domain.models import Patent, Classification, Priority, InternationalApplication, Party
 
 class INPIParser:
     
     def parser_cod_pedido(self, html):
         return re.findall(r"CodPedido=(\d+)", html)
-    
- 
 
     def extract_inid_text(self, soup, inid_code):
         pattern = re.compile(rf"\({inid_code}\)")

@@ -1,14 +1,11 @@
 import requests
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
+from config.settings import PASSWORD_INPI, LOGIN_INPI
 
 class INPIClient:
     def __init__(self):
         self.session = requests.Session()
-        self.login = os.getenv("login")
-        self.password = os.getenv("pass")
+        self.login = LOGIN_INPI
+        self.password = PASSWORD_INPI
         self.base_url = "https://busca.inpi.gov.br/pePI/"
     
     def authenticate(self):

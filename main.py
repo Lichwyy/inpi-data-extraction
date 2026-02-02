@@ -1,7 +1,7 @@
-from inpi.inpi_client import INPIClient
-from inpi.inpi_detail_service import INPIDetailService
-from inpi.inpi_parser import INPIParser
-from inpi.inpi_search import INPISearch
+from infrastructure.inpi.inpi_client import INPIClient
+from infrastructure.inpi.inpi_detail_service import INPIDetailService
+from infrastructure.parsers.inpi_parser import INPIParser
+from infrastructure.inpi.inpi_search import INPISearch
 from utils.file_manager import FileManager
 from pathlib import Path
 
@@ -27,4 +27,5 @@ if __name__ == "__main__":
         cod_pedido = parser.parser_cod_pedido(html_cod_pedido)
         dados_patentes = inpidetail.get_data(cod_pedido)
         patentes = parser.parser_detail(dados_patentes)
-        
+        print(patentes.title, " | ", patentes.application_number, " | ", patentes.publication_number, " | ", patentes
+              .abstract)
