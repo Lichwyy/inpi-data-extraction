@@ -8,6 +8,7 @@ requests = "*"
 dotenv = "*"
 beautifulsoup4 = "*"
 sqlalchemy = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
