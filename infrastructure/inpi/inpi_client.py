@@ -25,4 +25,4 @@ class INPIClient:
     def reauthenticate(self, response, inpi_search, number):
         if self.expired_session(response):
             self.authenticate()
-            inpi_search.search_by_number(number)
+            inpi_search.basic_search(number)

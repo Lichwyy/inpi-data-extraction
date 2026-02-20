@@ -4,8 +4,12 @@ from domain.models import Patent, Classification, Priority, InternationalApplica
 
 class INPIParser:
     
-    def parser_cod_pedido(self, html):
+    def parser_app_code(self, html):
         return re.findall(r"CodPedido=(\d+)", html)
+
+    def parser_number_of_pages(self, html):
+        pages = re.findall(r'\.\.\.\s*(\d+)', html)
+        return int(pages[-1])
 
     def extract_inid_text(self, soup, inid_code):
         pattern = re.compile(rf"\({inid_code}\)")
