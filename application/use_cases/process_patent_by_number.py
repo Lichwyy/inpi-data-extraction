@@ -1,20 +1,12 @@
-from infrastructure.parsers.inpi_parser import INPIParser
-from infrastructure.inpi.inpi_search import INPISearch
+from application.services.patent_fetcher import PatentFetcher
 
 class ProcessPatentByNumber:
-    def __init__(self, parser:INPIParser, inpi_search:INPISearch):
-        self.parser = parser
-        self.inpi_search = inpi_search
-    
+    def __init__(self, fetcher:PatentFetcher):
+        self.fetcher = fetcher
 
     def execute(self, number:str):
-        
-        html_app_code = self.inpi_search.basic_search(number)
-                
-        app_code = self.parser.parser_app_code(html_app_code)
-        
-        patent_text_data = self.inpi_search.search_detail(app_code)
-
-        patent = self.parser.parser_detail(patent_text_data)
-
-        return patent
+        try:
+            patent = self.fetcher.fetch_by_number(number)
+            return patent
+        except Exception as e:
+            return e

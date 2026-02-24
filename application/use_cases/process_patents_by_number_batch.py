@@ -7,4 +7,7 @@ class ProcessPatentNumberBatch:
 
     def execute(self, numbers:list[str]):
         for number in numbers:
-            yield self.process_patent.execute(number)
+            try:
+                yield self.process_patent.execute(number)
+            except Exception as e:
+                yield {"number":number, "error": str(e)}

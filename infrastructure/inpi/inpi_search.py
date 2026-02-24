@@ -5,6 +5,7 @@ class INPISearch:
         self.client = client
         self.search_url = self.client.base_url+"servlet/PatenteServletController"
 
+
     def _request_with_retry(self, method, **kwargs):
         r = method(self.search_url, **kwargs)
         r.encoding = "ISO-8859-1"
@@ -24,14 +25,14 @@ class INPISearch:
 
     def search_by_get(self, params):
         return self._request_with_retry(
-            self.client.session.get, 
+            self.client.session.get,
             params=params
         )
     
-    def basic_search(self, numero:str):
+    def basic_search(self, number:str):
         params = {
             "Action": "SearchBasico",
-            "NumPedido": numero,
+            "NumPedido": number,
             "FormaPesquisa": "todasPalavras",
             "Coluna": "Titulo",
             "RegisterPerPage": "20"
@@ -43,7 +44,7 @@ class INPISearch:
     def advanced_search(self, title:str = "", abstract:str = ""):
         data = {
             "NumPedido": "",
-            "ListaNumeroPatente": "\xa0",
+            "ListaNumeroPatente": "",
             "NumPrioridade": "",
             "CodigoPct": "",
             "DataDeposito1": "",
