@@ -1,5 +1,5 @@
 from infrastructure.inpi.inpi_client import INPIClient
-
+from time import sleep
 class INPISearch:
     def __init__(self, client:INPIClient):
         self.client = client
@@ -7,25 +7,40 @@ class INPISearch:
 
 
     def _request_with_retry(self, method, **kwargs):
-        r = method(self.search_url, **kwargs)
+        if method == "get":
+                r = self.client.session.get(self.search_url, **kwargs)
+                
+        elif method == "post":
+            r = self.client.session.post(self.search_url, **kwargs)
         r.encoding = "ISO-8859-1"
-        if self.client.expired_session(r.text):
+        
+        if self.client.expired_session(r.text) or r.status_code == 504 or r.status_code == 502:
+            sleep(2)
+            self.client.refresh_session()
+            sleep(2)
             self.client.authenticate()
-            r = method(self.search_url, **kwargs)
+            self.client.session.post(self.search_url)
+            if method == "get":
+                r = self.client.session.get(self.search_url, **kwargs)
+                
+            elif method == "post":
+                r = self.client.session.post(self.search_url, **kwargs)
             r.encoding = "ISO-8859-1"
 
         return r.text
     
 
     def search_by_post(self, data):
+        self.client.session.get(self.search_url)
         return self._request_with_retry(
-            self.client.session.post,
+            "post",
             data=data
         )
 
     def search_by_get(self, params):
+        self.client.session.get(self.search_url)
         return self._request_with_retry(
-            self.client.session.get,
+            "get",
             params=params
         )
     
@@ -35,7 +50,7 @@ class INPISearch:
             "NumPedido": number,
             "FormaPesquisa": "todasPalavras",
             "Coluna": "Titulo",
-            "RegisterPerPage": "20"
+            "RegisterPerPage": "40"
         }
         return self.search_by_get(params)
 
@@ -63,7 +78,7 @@ class INPISearch:
             "CpfCnpjDepositante": "",
             "NomeInventor": "",
             "ListaFigura": "null",
-            "RegisterPerPage": "20",
+            "RegisterPerPage": "30",
             "botao": " pesquisar » ",
             "Action": "SearchAvancado"
         }

@@ -4,7 +4,7 @@ from domain.models import Patent, Classification, Priority, InternationalApplica
 
 class INPIParser:
     
-    def parser_app_code(self, html):
+    def find_app_code(self, html):
         return re.findall(r"CodPedido=(\d+)", html)
 
     def parser_number_of_pages(self, html):

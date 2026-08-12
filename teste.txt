@@ -1,0 +1,1729 @@
+ 
+
+
+
+
+
+
+<html>
+    <head> 
+        <title>INPI</title>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+        <link href="/pePI/jsp/css/inpi.css" rel=stylesheet type=text/css>
+		<script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script>
+		<script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script>
+        
+		<script>
+		$(document).ready(function () {
+			marcaTitulo();
+		});
+		
+		function marcaTitulo(){
+			
+			var context = document.getElementById("tituloContext");
+			
+			var titulo = $("input[name='Titulo']").val();
+			var resumo = $("input[name='Resumo']").val();
+
+			marca.texto(titulo, tituloContext);
+			marca.texto(resumo, tituloContext);
+		
+		}
+			
+		</script>
+    </head>
+    <body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0">
+    
+	<input type="hidden" id="Resumo" name="Resumo" value="">
+	<input type="hidden" id="Titulo" name="Titulo" value="garrafa and plastica">
+	
+    <div class="context">
+    <form name="PatentePesquisa" method="POST" action="../servlet/PatenteServletController">
+    <div id="mainContainer">
+
+<div id="principal">
+<br/>
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+	<ul id="menu-barra-temp" style="list-style:none;">
+	<li style="display:inline; float:left;padding-right:10px; margin-right:10px; borderright:1px solid #EDEDED">
+		<a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text- Portal Padrão Barra de Identidade Visual do Governo Federal na Internet - APLICAÇÃO right:1px solid #EDEDED">
+		<a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text- decoration:none; color:white;">Portal do Governo Brasileiro</a>
+		</li>
+		<li>
+			<a style="font-family:sans,sans-serif; text-decoration:none; color:white;" 
+			href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo
+			</a>
+		</li>
+	</ul>
+</div>
+<div id="logo">
+	<a id="portal-logo" href="http://www.inpi.gov.br" title="O portal do Brasil">
+		<span id="portal-title-1">Instituto Nacional da</span>
+		<span id="portal-title" class="corto">Propriedade Industrial</span>
+		<span id="portal-description">Ministério da Economia</span>
+	</a>
+</div>
+<script src="/pePI/jsp/funcoes/barra.js" type="text/javascript"></script>
+
+
+	
+    <table width="780px" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" colspan="5">
+            <font class="titulo">Consulta à Base de Dados do INPI</font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" colspan="5">
+                <font class="normal">
+                   [ <a href="../jsp/Base_pesquisa.jsp" class="titulo">Início</a> |
+                   <a href="../jsp/Ajuda.jsp" class="normal">Ajuda?</a> ]
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" colspan="5">
+                <font class="normal">
+                » Consultar por: 
+                    <a href="/pePI/jsp/patentes/PatenteSearchBasico.jsp" class="titulo">Base Patentes</a> | 
+                    <a href="/pePI/jsp/Logout.jsp" class=titulo>Finalizar Sessão</a>
+                </font>
+            </td>
+        <tr>
+        <tr>
+		    <td colspan="5">
+   		    <hr class="hr">
+        	</td>
+        </tr>
+        <tr valign="middle">
+            <td align="right" colspan="5">
+				
+				&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" align="left">
+                <font class="normal">
+                    <b>RESULTADO DA PESQUISA</b> 
+                    (31/03/2026 às 14:48:47)<br>
+                    <b>Pesquisa por:</b>
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" align="left">
+	            <div id="tituloEResumoContextGlobal" class="context">
+                    <div id="tituloEResumoContext" class="context">
+	                   <font class="normal">
+	                   Título: 'GARRAFA AND PLASTICA' \
+	                   </font>
+                    </div>
+	                <font class="normal">
+	                    
+	                    Foram encontrados <b>57</b> processos que satisfazem  à pesquisa. Mostrando página <b>1</b> de <b>2</b>.<br>
+	                </font>
+	            </div> 
+            </td>
+        </tr>
+	    
+	            <tr>
+	            
+	                <td align="center" width="8" bgcolor="#B5D6AD">
+	                	<font class="normal">
+	       		               <input type="checkbox"  
+	       		               name="TodosMeusPedidos" 
+	       		               value="todos" 
+	       		               onclick='checkboxStatus(this)'>
+	                	</font>
+	                </td>
+	                
+		            <td align="center" width="120" bgcolor="#B5D6AD"><font class="normal"><b>Pedido</b></font></td>
+		            <td align="center" width="60" bgcolor="#B5D6AD"><font class="normal"><b>Depósito</b></font></td>
+		            <td align="center" width="370" bgcolor="#B5D6AD"><font class="normal"><b>Título</b></font></td>
+		            <td align="center" width="80" bgcolor="#B5D6AD"><font class="normal"><b>IPC</b></font></td>
+	            </tr>
+            <tbody id="tituloContext" class="Context">
+	            
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112024018511" 
+		               onChange="ConfirmMyList(this.form,'112024018511',0)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1750922&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2024 018511 7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                03/04/2023
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA DEGRADÁVEL, MÉTODO DE PREPARAÇÃO E MÉTODO DE DEGRADAÇÃO DA MESMA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        C08L 67/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112024010471" 
+		               onChange="ConfirmMyList(this.form,'112024010471',1)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1742132&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2024 010471 0
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                16/12/2022
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA REUTILIZÁVEL, E, MÉTODO PARA PRODUZIR UMA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="102018072319" 
+		               onChange="ConfirmMyList(this.form,'102018072319',2)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1491900&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 10 2018 072319 7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                30/10/2018
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA COM MEIOS DE ENCAIXE PARA ACOPLAMENTO DE UMA OU MAIS GARRAFAS
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 21/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112019011276" 
+		               onChange="ConfirmMyList(this.form,'112019011276',3)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1512460&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2019 011276 6
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                30/11/2017
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA PARA CONTER UM PRODUTO SOB PRESSÃO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 83/38
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112019011362" 
+		               onChange="ConfirmMyList(this.form,'112019011362',4)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1512557&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2019 011362 2
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                30/11/2017
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        SISTEMA DISPENSADOR PRESSURIZADO E GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 83/70
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112019008956" 
+		               onChange="ConfirmMyList(this.form,'112019008956',5)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1509593&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2019 008956 0
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                25/10/2017
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA COM UMA BASE DO TIPO PARA CHAMPANHE E MÉTODOS DE PRODUÇÃO DA MESMA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="102016030169" 
+		               onChange="ConfirmMyList(this.form,'102016030169',6)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1404501&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 10 2016 030169 6
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                21/12/2016
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA HERMÉTICA SANFONADA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112018012253" 
+		               onChange="ConfirmMyList(this.form,'112018012253',7)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=1479127&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2018 012253 0
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                26/08/2016
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA COM UMA PORÇÃO DE PEGA  ANULAR E EMBALAGEM DE ALIMENTO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 23/10
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="102013001542" 
+		               onChange="ConfirmMyList(this.form,'102013001542',8)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=940013&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 10 2013 001542 3
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                21/01/2013
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        ALÇA PARA UMA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 23/10
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112013006898" 
+		               onChange="ConfirmMyList(this.form,'112013006898',9)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=941319&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2013 006898 1
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                21/09/2011
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        BASE PARA UMA GARRAFA PLÁSTICA E GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI1104091" 
+		               onChange="ConfirmMyList(this.form,'PI1104091',10)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=872974&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 1104091-2
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                09/08/2011
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        BEBEDOURO ABASTECIDO COM A PRÓPRIA GARRAFA DO CONSUMO PLÁSTICA OU VIDRO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B67D 7/00
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="112012030038" 
+		               onChange="ConfirmMyList(this.form,'112012030038',11)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=936831&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        BR 11 2012 030038 5
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                12/05/2011
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        MÉTODO E CONJUNTO PARA CORTE DE CÚPULA DO GARGALO DE UMA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B29C 49/74
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI1003699" 
+		               onChange="ConfirmMyList(this.form,'PI1003699',12)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=861514&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 1003699-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                22/10/2010
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA DE 2,1 LITROS PARA ACONDICIONAR ENERGÉTICO LÍQUIDO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0916357" 
+		               onChange="ConfirmMyList(this.form,'PI0916357',13)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=857924&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0916357-3
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                15/07/2009
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        FORMULAÇÃO PLÁSTICA PARA PRODUZIR GARRAFAS PLÁSTICAS EM UM PROCESSO DE MOLDAGEM POR SOPRO COM ESTIRAMENTO EM DUAS ESTAÇÕES, E, MÉTODO PARA PRODUZIR UMA GARRAFA PLÁSTICA EM UM PROCESSO DE MOLDAGEM POR SOPRO COM ESTIRAMENTO EM DUAS ESTAÇÕES
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        C08L 23/06
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8900514" 
+		               onChange="ConfirmMyList(this.form,'MU8900514',14)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=794288&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8900514-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                10/03/2009
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8803039" 
+		               onChange="ConfirmMyList(this.form,'MU8803039',15)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=780938&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8803039-3
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                29/09/2008
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA DE BEBIDA CARBONATADA COM VOLUME REDUZIVEL
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/04
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8801692" 
+		               onChange="ConfirmMyList(this.form,'MU8801692',16)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=774948&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8801692-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                30/07/2008
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA SANFONADA DE BEBIDA CARBONATADA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0814702" 
+		               onChange="ConfirmMyList(this.form,'PI0814702',17)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=821751&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0814702-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                27/06/2008
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA PARA ENCHIMENTO A QUENTE OU TRATAMENTO TÉRMICO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0720544" 
+		               onChange="ConfirmMyList(this.form,'PI0720544',18)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=803926&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0720544-9
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                08/11/2007
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA MULTIUSO FABRICADA EM PEÇA ÚNICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0703368" 
+		               onChange="ConfirmMyList(this.form,'PI0703368',19)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=743117&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0703368-0
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                15/08/2007
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        FUNIL ROSQUEÁVEL PARA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B67C 11/00
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8700037" 
+		               onChange="ConfirmMyList(this.form,'MU8700037',20)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=727457&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8700037-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                12/01/2007
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        DISPOSIÇÃO CONSTRUTIVA DE GARRAFA PLÁSTICA PARA LÍQUIDOS EM GERAL
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 41/62
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0602412" 
+		               onChange="ConfirmMyList(this.form,'PI0602412',21)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=709203&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0602412-2
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                08/06/2006
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        TAMPA ALONGADA SUPERIORMENTE PARA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 23/00
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8501905" 
+		               onChange="ConfirmMyList(this.form,'MU8501905',22)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=687355&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8501905-4
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                05/09/2005
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA RETRÁTIL POR COMPRESSÃO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 21/06
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8501182" 
+		               onChange="ConfirmMyList(this.form,'MU8501182',23)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=684093&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8501182-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                09/03/2005
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        DISPOSIÇÃO CONSTRUTIVA APLICADA A GARRAFA PLÁSTICA PET
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 23/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8402071" 
+		               onChange="ConfirmMyList(this.form,'MU8402071',24)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=594585&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8402071-7
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                13/01/2004
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        FUNIL PARA GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B67C 11/00
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0314697" 
+		               onChange="ConfirmMyList(this.form,'PI0314697',25)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=674968&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0314697-9
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                16/09/2003
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/10
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="MU8300185" 
+		               onChange="ConfirmMyList(this.form,'MU8300185',26)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=623140&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        MU 8300185-9
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                26/02/2003
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        DESFIADOR DE GARRAFA PLÁSTICA
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B29B 13/00
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0206091" 
+		               onChange="ConfirmMyList(this.form,'PI0206091',27)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=627560&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0206091-4
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                23/10/2002
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA PLÁSTICA COM BASE TIPO CHAMPANHE
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=#E0E0E0>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI0012958" 
+		               onChange="ConfirmMyList(this.form,'PI0012958',28)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=597087&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 0012958-5
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                24/07/2000
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        GARRAFA EM MATÉRIA PLÁSTICA, APRESENTANDO MEIOS DE REFORÇO
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+        	<tr bgColor=white>
+	            
+		            <td>
+		               <input type="checkbox"  
+		               name="MeusPedidos" 
+		               value="PI9903508" 
+		               onChange="ConfirmMyList(this.form,'PI9903508',29)">
+		            </td>
+	                
+	            <td align="center">
+	                <font class="normal">
+	                    
+	                    
+	                    <a href='/pePI/servlet/PatenteServletController?Action=detail&CodPedido=527461&SearchParameter=garrafa and plastica                                   &Resumo=&Titulo=garrafa and plastica' class='visitado'>
+	                        PI 9903508-1
+	                    </a>
+	              	               
+	                </font>
+	            </td>
+	            <td align="center">
+					<font class="normal">
+	                05/08/1999
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="normal">
+	                    <b>
+	                        EMBALAGEM EM GARRAFA PLÁSTICA PARA SUCO DE CANA DE AÇÚCAR NATURAL
+	                    </b>
+	                </font>
+	            </td>
+	            <td align="left">
+	                <font class="alerta">
+                        B65D 1/02
+	                </font>
+	            </td>
+	        </tr>
+		    
+	    </tbody>
+        <tr>
+            <td colspan="4" align="left">
+                <font class="normal">
+                &nbsp;<br>Páginas de Resultados:<br>
+                <b>1</b> |<a href="/pePI/servlet/PatenteServletController?Action=nextPage&Page=2&Resumo=&Titulo=garrafa and plastica" class="normal">2</a>-<a href="/pePI/servlet/PatenteServletController?Action=nextPage&Page=2&Resumo=&Titulo=garrafa and plastica" class="normal">Próxima»</a>
+                </font>
+                <input type= "hidden" name="Page" value="1">
+   				<input type= "hidden" name="NumPedido" value="">
+               	<input type= "hidden" name="Action" value="MeusPedidos">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+
+	<br/>
+      
+	<div id="bottom_principal"></div>
+	<div id="footer">
+		<div id="texto_footer">
+			<p>Rua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910</p>
+		</div>
+		<div id="logo_ouvidoria">
+			<a href="http://faleconosco.inpi.gov.br/" target="blank"><img src="/pePI/jsp/imagens/faleconosco.png" border="0" alt="Fale Conosco" onmouseout="this.src='/pePI/jsp/imagens/faleconosco.png';"
+				title="Fale Conosco" onmouseover="this.src='/pePI/jsp/imagens/faleconosco.png';" /> </a>
+		</div>
+	</div>
+</html>
+App Code:  1750922 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+1
+GARRAFA PLÁSTICA DEGRADÁVEL, MÉTODO DE PREPARAÇÃO E MÉTODO DE DEGRADAÇÃO DA MESMA
+App Code:  1742132 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+2
+GARRAFA PLÁSTICA REUTILIZÁVEL, E, MÉTODO PARA PRODUZIR UMA GARRAFA PLÁSTICA
+App Code:  1491900 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+3
+GARRAFA PLÁSTICA COM MEIOS DE ENCAIXE PARA ACOPLAMENTO DE UMA OU MAIS GARRAFAS
+App Code:  1512460 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+4
+GARRAFA PLÁSTICA PARA CONTER UM PRODUTO SOB PRESSÃO
+App Code:  1512557 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+5
+SISTEMA DISPENSADOR PRESSURIZADO E GARRAFA PLÁSTICA
+App Code:  1509593 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+6
+GARRAFA PLÁSTICA COM UMA BASE DO TIPO PARA CHAMPANHE E MÉTODOS DE PRODUÇÃO DA MESMA
+App Code:  1404501 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+7
+GARRAFA PLÁSTICA HERMÉTICA SANFONADA
+App Code:  1479127 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+8
+GARRAFA PLÁSTICA COM UMA PORÇÃO DE PEGA ANULAR E EMBALAGEM DE ALIMENTO
+App Code:  940013 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+9
+ALÇA PARA UMA GARRAFA PLÁSTICA
+App Code:  941319 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+10
+BASE PARA UMA GARRAFA PLÁSTICA E GARRAFA PLÁSTICA
+App Code:  872974 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+11
+BEBEDOURO ABASTECIDO COM A PRÓPRIA GARRAFA DO CONSUMO PLÁSTICA OU VIDRO
+App Code:  936831 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+12
+MÉTODO E CONJUNTO PARA CORTE DE CÚPULA DO GARGALO DE UMA GARRAFA PLÁSTICA
+App Code:  861514 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+13
+GARRAFA PLÁSTICA DE 2,1 LITROS PARA ACONDICIONAR ENERGÉTICO LÍQUIDO
+App Code:  857924 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+14
+FORMULAÇÃO PLÁSTICA PARA PRODUZIR GARRAFAS PLÁSTICAS EM UM PROCESSO DE MOLDAGEM POR SOPRO COM ESTIRAMENTO EM DUAS ESTAÇÕES, E, MÉTODO PARA PRODUZIR UMA GARRAFA PLÁSTICA EM UM PROCESSO DE MOLDAGEM POR SOPRO COM ESTIRAMENTO EM DUAS ESTAÇÕES
+App Code:  794288 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+15
+GARRAFA PLÁSTICA
+App Code:  780938 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+16
+GARRAFA PLÁSTICA DE BEBIDA CARBONATADA COM VOLUME REDUZIVEL
+App Code:  774948 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+17
+GARRAFA PLÁSTICA SANFONADA DE BEBIDA CARBONATADA
+App Code:  821751 pagina:  <html> <head> <title>INPI</title> <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type> <link href="../jsp/css/inpi.css?1" rel=stylesheet type=text/css> <link href="../jsp/css/captcha.css" rel=stylesheet type=text/css> <link href="../jsp/css/accordions.css" rel=stylesheet type=text/css> <link href="../jsp/css/patenteDetalhe.css" rel=stylesheet type=text/css> <link href="../jsp/css/modalAnuidade.css" rel=stylesheet type=text/css> <script type="text/javascript" src="../jsp/funcoes/geral.js"></script> <script type="text/javascript" src="../jsp/funcoes/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="../jsp/funcoes/captcha.js"></script> <script type="text/javascript" src="../jsp/funcoes/upload-documento.js"></script> <script type="text/javascript" src="../jsp/funcoes/meusPedidos.js"></script> <!-- <script type="text/javascript" src="../jsp/funcoes/jquery.bxslider.min.js"></script> --> <!-- <script type="text/javascript" src="../jsp/funcoes/patenteDetalhe.js"></script> --> <script type="text/javascript" src="../jsp/funcoes/mark.js" charset="UTF-8"></script> <script type="text/javascript" src="../jsp/funcoes/marcacao.js" charset="UTF-8"></script> <script> $(document).ready(function () { var resumoContext = document.getElementById("resumoContext"); var tituloContext = document.getElementById("tituloContext"); var titulo = $("input[name='titulo']").val(); var resumo = $("input[name='resumo']").val(); marca.texto(titulo, tituloContext); marca.texto(resumo, tituloContext); marca.texto(resumo, resumoContext); }); </script> <!-- RECAPTCHA --> <script src="//www.google.com/recaptcha/api.js"></script> </head> <body bgColor="#ffffff" leftMargin=0 text="#000000" topMargin=0> <div id="janelaModalCaptchaDownload" class="janelaModal"> <div class="tituloModal">Digite o texto da imagem abaixo</div> <!-- RECAPTCHA --> <div class="g-recaptcha" data-sitekey="6LfhwSAaAAAAANyx2xt8Ikk-YkQ3PGeAVhCfF3i2"></div> <fieldset></fieldset> <input type="hidden" id="NumeroID"> <input type="hidden" id="hastImagem"> </div> <input type="hidden" id="resumo" name="resumo" value=""> <input type="hidden" id="titulo" name="titulo" value=""> <div id="janelaModalUploadImagem" class="janelaModal-md"> <div class="tituloModal">Enviar imagem</div> <fieldset> <div id="mensagemLogAcesso" style="padding: 20px; color: #6F6F6F; text-align: justify; font: 10px Arial, Helvetica, sans-serif"> <form action="/pePI/UploadController" method="post" enctype="multipart/form-data"> <input
+18
+GARRAFA PLÁSTICA PARA ENCHIMENTO A QUENTE OU TRATAMENTO TÉRMICO
+ 
+
+
+
+
+
+
+<html>
+    <head>
+        <title>INPI</title>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+        <link href="/pePI/jsp/css/inpi.css" rel=stylesheet type=text/css>
+        <script type="text/javascript" src="/pePI/jsp/funcoes/jquery-1.6.2.min.js"></script>        
+        <script type="text/javascript" src="/pePI/jsp/funcoes/jquery.maskedinput-1.3.min.js"></script>
+		<script type="text/javascript"  src="/pePI/jsp/funcoes/tooltip.js" charset="ISO-8859-1"></script>
+    </head>
+    <body bgColor="#ffffff" leftMargin="0" text="#000000" topMargin="0" onload="document.F_PatenteBasico.NumPedido.focus()">
+    <form name="F_PatenteBasico" method="post" action="/pePI/servlet/PatenteServletController" >
+        <div id="mainContainer">
+
+<div id="principal">
+<br/>
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+	<ul id="menu-barra-temp" style="list-style:none;">
+	<li style="display:inline; float:left;padding-right:10px; margin-right:10px; borderright:1px solid #EDEDED">
+		<a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text- Portal Padrão Barra de Identidade Visual do Governo Federal na Internet - APLICAÇÃO right:1px solid #EDEDED">
+		<a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text- decoration:none; color:white;">Portal do Governo Brasileiro</a>
+		</li>
+		<li>
+			<a style="font-family:sans,sans-serif; text-decoration:none; color:white;" 
+			href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo
+			</a>
+		</li>
+	</ul>
+</div>
+<div id="logo">
+	<a id="portal-logo" href="http://www.inpi.gov.br" title="O portal do Brasil">
+		<span id="portal-title-1">Instituto Nacional da</span>
+		<span id="portal-title" class="corto">Propriedade Industrial</span>
+		<span id="portal-description">Ministério da Economia</span>
+	</a>
+</div>
+<script src="/pePI/jsp/funcoes/barra.js" type="text/javascript"></script>
+
+
+
+        <table width="100%">
+            <tr>
+                <td colspan="2" align="center"><font class="titulo">Consulta à  Base de Dados do INPI</font></td>
+            </tr>
+            <tr>
+                <td colspan="4" align="left">
+                    <font class="normal">
+                        <div align="right">
+                            [ <a href="/pePI/jsp/Base_pesquisa.jsp" class="titulo">Início</a> |
+                            <a href="/pePI/jsp/Ajuda.jsp" class="normal">Ajuda?</a> 
+                            Login: phavl
+                        	 ]
+                        </div>
+                        	» Consultar por: 
+                            <font class="tituloatual"><b>Base Patentes</b></font> |
+                            <a href="/pePI/jsp/patentes/PatenteSearchAvancado.jsp" class="titulo">Pesquisa Avançada</a> |
+                            <a href="/pePI/jsp/patentes/PatenteSearchAniversario.jsp" class="titulo">Calendário</a> |
+				           
+								<a href = "/pePI/servlet/PatenteServletController?Action=SearchBasico&MeusPedidos=MeusPedidos" class = "titulo">Meus Pedidos</a> |
+								<a href = "/pePI/servlet/PatenteServletController?Action=SearchBasico&MeuPedidoRPI=MeusPedidos" class = "titulo">Meus Pedidos da Semana</a> |
+				                
+                            <a href="/pePI/jsp/Logout.jsp" class="titulo">Finalizar Sessão</a>
+                        <br>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+	            <td colspan="4">
+   			        <hr class="hr">
+            	</td>
+            </tr>
+            <tr>
+            	<td colspan="4" align="center">
+                    <font class="normal"><b>PESQUISA BÁSICA</b></font>
+                    <br>
+					<span class="ExempForm">&nbsp;&nbsp;Forneça abaixo as chaves de pesquisa desejadas.Evite o uso de frases ou palavras genéricas.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+				</td>
+            </tr>
+            <tr>
+                <td align="right" width="180" bgcolor="#E9E9E9">
+                    <font class="normal">Contenha o Número do Pedido&nbsp;</font>
+                </td>
+                <td align="left" colspan="2">
+                    <font class="normal"><input type="text" class="basic" name="NumPedido" size="30" maxlength="300"></font>&nbsp;
+					<img class="tooltipInfo" title="Numero21" src="/pePI/jsp/imagens/help.gif">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+				</td>
+            </tr>
+            
+            
+            <tr>
+                <td align="right" width="160" bgcolor="#E9E9E9">
+                    <font class="normal">Contenha o Nº de Recolhimento da União - GRU </font>
+                </td>
+                <td align="left" colspan="2">
+                    <font class="normal"><input type="text" class="basic" name="NumGru" size="30" maxlength="17" id="NumGru"></font>&nbsp;
+					<img class="tooltipInfo" title="Numero17" src="/pePI/jsp/imagens/help.gif">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+				</td>
+            </tr>            
+            <tr>
+                <td align="right" width="160" bgcolor="#E9E9E9">
+                    <font class="normal">Contenha o Nº do Protocolo </font>
+                </td>
+                <td align="left" colspan="2">
+                    <font class="normal"><input type="text" class="basic" name="NumProtocolo" size="30" maxlength="12" id="NumProtocolo"></font>&nbsp;
+					<img class="tooltipInfo" title="NumeroProtocolo" src="/pePI/jsp/imagens/help.gif">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+				</td>
+            </tr>
+            <tr> 
+            
+            <tr> 
+                <td align="right" bgcolor="#E9E9E9">
+                    <font class="normal">Contenha&nbsp;</font>
+                </td>
+                <td align="left" colspan="2">
+                    <select class="basic" name="FormaPesquisa" size="1">
+                        <option value='todasPalavras'>todas as palavras</option>
+                        <option value='expExata'>a expressão exata</option>
+                        <option value='qualquerPalavra'>qualquer uma das palavras</option>
+                        <option value='aproximacao'>a palavra aproximada</option>
+                    </select>
+                    <font class="normal"><input type="text" class="basic" name="ExpressaoPesquisa" size="30"></font>
+                    <font class="normal"> no </font>
+                    <select class="basic" name="Coluna" size="1">
+                        <option value='Titulo'> Título </option>
+                        <option value='Resumo'>Resumo</option>
+                        <option value='NomeDepositante'>Nome do Depositante </option>
+                        <option value='NomeInventor'>Nome do Inventor</option>
+                        <option value='CpfCnpjDepositante'>CPF/CNPJ do Depositante</option>
+                    </select>
+					&nbsp;
+					<img class="tooltipInfo" title="PesquisaBasica" src="/pePI/jsp/imagens/help.gif">                
+				</td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+				</td>
+            </tr>
+            <tr>
+                <td align="right" width="150" bgcolor="#E9E9E9"><font class="normal"> Nº de Processos por Página :</font></td>
+                <td align="left" colspan="2">
+                    <font class="normal"> 
+                        <select class="basic" name="RegisterPerPage" size="1">
+                        <option value='100'>100</option>
+                        <option value='80'>80</option>
+                        <option value='60'>60</option>
+                        <option value='40'>40</option>
+                        <option value='20' selected>20</option>
+                        </select>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <font class="normal">
+                        <br>
+                        <input type="submit" name="botao" class="basic" value=" pesquisar » ">
+                        &nbsp;
+                        <input type="reset" class="basic" value=" limpar ">
+                        <input type= "hidden" name="Action" value="SearchBasico">
+                    </font>
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+    <!-- Incluindo tooltips-->
+	<div id="infoNumero21" style="display:none;">
+		O número do processo administrativo é o número dado ao depositante 
+		e é composto por duas letras, o ano de depósito, um número serial 
+		anual, com sete dígitos, e um dígito verificador para este número 
+		serial. O dígito verificador para a consulta é irrelevante. 
+		<br>Exemplo: "PI 0101161-8"; "MU 6900960-0"; "MI 5500233-1"; "C1 0201935-3"<br>
+		<br>A partir de janeiro de 2012 os números de patentes foram redefinidos 
+		para atender o padrão OMPI St13, passando a ter outra uma formatação: BR 11 2012 012852 3
+	</div>
+	<div id="infoPesquisaBasica" align="left" style="display:none;">
+		-  Construtor de Pesquisas:
+		<br>Você pode realizar facilmente pesquisas dinâmicas ao digitar palavras em uma combinação das caixas de texto. 
+		É apresentado aqui o que cada caixa faz:
+		<br><b>Todas as Palavras</b>: o resultado da pesquisa deve conter todas essas palavras listadas na caixa de pesquisa. 
+		<br><b>A Expressão Exata</b>: o resultado da pesquisa deve conter as palavras exatamente na ordem que forem digitadas.
+		<br><b>Qualquer uma das Palavras</b>: o resultado da pesquisa deve conter pelo menos uma das palavras que forem digitadas.
+		<br><b>A Palavra Aproximada</b>: o resultado da pesquisa deve conter pelo menos uma das palavras que forem digitadas e 
+		também apresenta as palavras aproximadas ao termo digitado, encontrando variações neste termo. O sistema de busca 
+		irá fornecer o percentual ou grau de acerto entre o termo digitado e a palavra encontrada na página de Resultado 
+		da Pesquisa. 
+	</div>
+	
+	<div id="infoNumeroProtocolo" style="display:none;">
+		O número do protocolo é o número dado à petição peticionada e contém 12 dígitos.
+		<br>Exemplo: "860140000571".
+	</div>
+	
+	<div id="infoNumero17" style="display:none;">	
+		O número da GRU é o número da Guia de Recolhimento da União usada e paga para pleitear o serviço administrativo.
+		É composto por 17 dígitos.<br> Exemplo: "00000441602956725".
+	</div>	
+
+    </body>
+    
+	<br/>
+      
+	<div id="bottom_principal"></div>
+	<div id="footer">
+		<div id="texto_footer">
+			<p>Rua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910</p>
+		</div>
+		<div id="logo_ouvidoria">
+			<a href="http://faleconosco.inpi.gov.br/" target="blank"><img src="/pePI/jsp/imagens/faleconosco.png" border="0" alt="Fale Conosco" onmouseout="this.src='/pePI/jsp/imagens/faleconosco.png';"
+				title="Fale Conosco" onmouseover="this.src='/pePI/jsp/imagens/faleconosco.png';" /> </a>
+		</div>
+	</div>
+</html>
+App Code:  803926 pagina:  
+19
+None
+App Code:  743117 pagina:  
+20
+None
+App Code:  727457 pagina:  
+21
+None
+App Code:  709203 pagina:  
+22
+None
+App Code:  687355 pagina:  
+23
+None
+App Code:  684093 pagina:  
+24
+None
+App Code:  594585 pagina:  
+25
+None
+App Code:  674968 pagina:  
+26
+None
+App Code:  623140 pagina:  
+27
+None
+App Code:  627560 pagina:  
+28
+None
+App Code:  597087 pagina:  
+29
+None
+App Code:  527461 pagina:  
+30
+None
+App Code:  565113 pagina:  
+31
+None
+App Code:  552279 pagina:  
+32
+None
+App Code:  530637 pagina:  
+33
+None
+App Code:  516515 pagina:  
+34
+None
+App Code:  253374 pagina:  
+35
+None
+App Code:  253375 pagina:  
+36
+None
+App Code:  419352 pagina:  
+37
+None
+App Code:  475089 pagina:  
+38
+None
+App Code:  468219 pagina:  
+39
+None
+App Code:  451138 pagina:  
+40
+None
+App Code:  245034 pagina:  
+41
+None
+App Code:  422323 pagina:  
+42
+None
+App Code:  441322 pagina:  
+43
+None
+App Code:  241753 pagina:  
+44
+None
+App Code:  239427 pagina:  
+45
+None
+App Code:  390032 pagina:  
+46
+None
+App Code:  392452 pagina:  
+47
+None
+App Code:  232167 pagina:  
+48
+None
+App Code:  408962 pagina:  
+49
+None
+App Code:  200146 pagina:  
+50
+None
+App Code:  350340 pagina:  
+51
+None
+App Code:  360813 pagina:  
+52
+None
+App Code:  219779 pagina:  
+53
+None
+App Code:  216316 pagina:  
+54
+None
+App Code:  216315 pagina:  
+55
+None
+App Code:  212468 pagina:  
+56
+None
+App Code:  309876 pagina:  
+57
+None

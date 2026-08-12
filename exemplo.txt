@@ -1,0 +1,160 @@
+Patent
+  Title: MÉTODO DE MOAGEM E MEIO DE MOAGEM
+  Abstract: MÉTODO DE MOAGEM E MEIO DE MOAGEM. A invenção refere-se a um método para fabricar celulose microfibrilada, um meio de moagem em partículas adequado para uso no dito método, um material que se desgasta ou se torna áspero e um método para produção do dito meio de moagem em partículas.
+  Country: BR
+  Source: INPI
+  Publication No: BR 11 2016 026678 1 B1 (Date: 15/08/2017)
+  Application No: None (Filing Date: 14/05/2015)
+  Exam Pub Date: 28/12/2021
+  National Phase Start: 14/11/2016
+  Priorities:
+    - 3 0 (
+  Classifications:
+    - IPC D21D 1/00 1968.09 Métodos de bater ou refinar; Batedeiras do tipo Hollander;
+    - IPC D21H 11/18 1990.01 Polpa ou papel, compreendendo fibras de celulose ou lignocelulose de origem natural apenas; / modificadas por pós-tratamento especial; / Fibras altamente hidratadas, aumentadas ou fibriláveis;
+  Int. Applications:
+    - PCT EP2015060724 14/05/2015 INPI
+    - W.O. 2015/173376 19/11/2015 WIPO
+  Parties:
+    - FIBERLEAN TECHNOLOGIES LIMITED None Titular
+    - DANNEMANN, SIEMSEN, BIGLER & IPANEMA MOREIRA None Procurador
+    - TAFADZWA MOTSI None Inventor
+    - DAVID ROBERT SKUSE None Inventor
+    - JEAN ANDRE ALARY None Inventor
+    - ANDREAS BORGER None Inventor
+    - NEIL ROWSON None Inventor
+    - THOMAS RICHARD SKUSE None Inventor  
+Patent
+  Title: CONSTRUCTO DE POLIPEPTÍDEO DE LISINA-PEPTÍDEO ANTIMICROBIANO (AMP), POLIPEPTÍDEO ISOLADO, POLINUCLEOTÍDEOS ISOLADOS, VETOR RECOMBINANTE, CÉLULA HOSPEDEIRA ISOLADA, COMPOSIÇÃO FARMACÊUTICA, E USOS DO CONSTRUTO, DE UMA LISINA ISOLADA E DE UMA COMPOSIÇÃO
+  Abstract: CONSTRUCTOS DE POLIPEPTÍDEO DE LISINA-PEPTÍDEO ANTIMICROBIANA (AMP), LISINAS, POLINUCLEOTÍDEOS ISOLADOS QUE CODIFICAMOS MESMOS E USOS DOS MESMOS. A presente descrição refere-se a constructos de polipeptídeo de lisina-AMP, polipeptídeos de lisina isolados, e composições farmacêuticas compreendendo os polipeptídeos isolados e/ou constructos de polipeptídeo de lisina-AMP. Métodos de usar os constructos de polipeptídeo de lisina-AMP, polipeptídeos de lisina isolados e composições farmacêuticas são também providos neste documento, incluindo métodos de tratar uma infecção bacteriana de um órgão ou tecido em que tensoativo pulmonar está presente ou infecções bacterianas Gram-negativas que estão associadas a um biofilme. Além disso, polinucleotídeos isolados que codificam os constructos de polipeptídeo de lisina-AMP e polipeptídeos de lisina isolados são divulgados neste documento.
+  Country: BR
+  Source: INPI
+  Publication No: None (Date: 09/03/2021)
+  Application No: BR 11 2020 018787 9 A2 (Filing Date: 23/08/2019)
+  Exam Pub Date: -
+  National Phase Start: 15/09/2020
+  Priorities:
+    - 62/860,836 13/06/2019 ESTADOS UNIDOS
+  Classifications:
+    - IPC A61K 38/16 1995.01 Preparações medicinais contendo peptídeos; / Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatostatinas; Melanotropinas; Seus derivados;
+    - IPC A61K 38/46 1995.01 Preparações medicinais contendo peptídeos; / Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatostatinas; Melanotropinas; Seus derivados; / Enzimas; Pró-enzimas; Seus derivados; / Hidrolases (3);
+    - IPC A61P 31/04 2000.01 Antiinfecciosos, i.e. antibióticos, antissépticos, quimioterapêuticos; / Agentes antibacterianos;
+    - IPC C07K 14/005 1995.01 Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatoestatinas; Melanotropinas; Derivados dos mesmos; / de vírus;
+    - IPC C12N 15/62 1990.01 Mutação ou engenharia genética; DNA ou RNA concernentes à engenharia genética, vetores, p. ex. plasmídeos ou seu isolamento, preparação ou purificação; Uso de seus hospedeiros; / Tecnologia do DNA recombinante; / Fragmentos de DNA ou RNA; Suas formas modificadas; / Sequências de DNA que codificam proteínas de fusão;
+  Int. Applications:
+    - PCT US2019047916 23/08/2019 INPI
+    - W.O. 2020/046747 05/03/2020 WIPO
+  Parties:
+    - CONTRAFECT CORPORATION None Depositante
+    - Dannemann, Siemsen, Bigler & Ipanema Moreira None Procurador
+    - RAYMOND SCHUCH None Inventor  
+Patent
+  Title: ESTRUTURA PARA CADEIRA ODONTOLÓGICA PORTÁTIL E DOBRAVÉL
+  Abstract: ESTRUTURA PARA CADEIRA ODONTOLÓGICA PORTÁTIL E DOBRÁVEL. A presente Patente de Modelo de Utilidade refere-se a uma cadeira odontológica de proposta inovadora, sendo caracterizada por permitir a seu usuário ser dobrada e carregada para atendimentos externos, pois seu volume final dobrada é sensivelmente reduzido frente ao seu volume em uso, sem deixar de atender aos movimentos necessários de uma cadeira odontológica normal. A presente invenção é constituída basicamente de uma base(1) com pés reguláveis(2) ligada de forma pantográfica por diagonais(3) à estrutura do assento(4) provida de braços curvos e fixos(5) e mecanismo de extensão frontal descansa-pés(6) e ligada à estrutura do encosto(7) por meio de chave de regulagem(8).
+  Country: BR
+  Source: INPI
+  Publication No: None (Date: 21/03/2017)
+  Application No: BR 20 2015 022990 4 U2 (Filing Date: 13/09/2015)
+  Exam Pub Date: -
+  National Phase Start: None
+  Priorities:
+    - None
+  Classifications:
+    - IPC A61G 15/00 1968.09 Cadeiras cirúrgicas; Cadeiras de dentista; Acessórios especialmente adaptados para esse fim, p. ex. cavaletes para instrumentos;
+  Parties:
+    - MARCELO SCHETTINI DIAS DA COSTA None Depositante
+    - PEDROLINA ALMEIDA CARVALHO None Procurador
+    - MARCELO SCHETTINI DIAS DA COSTA None Inventor  
+Patent
+  Title: MÉTODO DE MOAGEM E MEIO DE MOAGEM
+  Abstract: MÉTODO DE MOAGEM E MEIO DE MOAGEM. A invenção refere-se a um método para fabricar celulose microfibrilada, um meio de moagem em partículas adequado para uso no dito método, um material que se desgasta ou se torna áspero e um método para produção do dito meio de moagem em partículas.
+  Country: BR
+  Source: INPI
+  Publication No: BR 11 2016 026678 1 B1 (Date: 15/08/2017)
+  Application No: None (Filing Date: 14/05/2015)
+  Exam Pub Date: 28/12/2021
+  National Phase Start: 14/11/2016
+  Priorities:
+    - 3 0 (
+  Classifications:
+    - IPC D21D 1/00 1968.09 Métodos de bater ou refinar; Batedeiras do tipo Hollander;
+    - IPC D21H 11/18 1990.01 Polpa ou papel, compreendendo fibras de celulose ou lignocelulose de origem natural apenas; / modificadas por pós-tratamento especial; / Fibras altamente hidratadas, aumentadas ou fibriláveis;
+  Int. Applications:
+    - PCT EP2015060724 14/05/2015 INPI
+    - W.O. 2015/173376 19/11/2015 WIPO
+  Parties:
+    - FIBERLEAN TECHNOLOGIES LIMITED None Titular
+    - DANNEMANN, SIEMSEN, BIGLER & IPANEMA MOREIRA None Procurador
+    - TAFADZWA MOTSI None Inventor
+    - DAVID ROBERT SKUSE None Inventor
+    - JEAN ANDRE ALARY None Inventor
+    - ANDREAS BORGER None Inventor
+    - NEIL ROWSON None Inventor
+    - THOMAS RICHARD SKUSE None Inventor  
+Patent
+  Title: CONSTRUCTO DE POLIPEPTÍDEO DE LISINA-PEPTÍDEO ANTIMICROBIANO (AMP), POLIPEPTÍDEO ISOLADO, POLINUCLEOTÍDEOS ISOLADOS, VETOR RECOMBINANTE, CÉLULA HOSPEDEIRA ISOLADA, COMPOSIÇÃO FARMACÊUTICA, E USOS DO CONSTRUTO, DE UMA LISINA ISOLADA E DE UMA COMPOSIÇÃO
+  Abstract: CONSTRUCTOS DE POLIPEPTÍDEO DE LISINA-PEPTÍDEO ANTIMICROBIANA (AMP), LISINAS, POLINUCLEOTÍDEOS ISOLADOS QUE CODIFICAMOS MESMOS E USOS DOS MESMOS. A presente descrição refere-se a constructos de polipeptídeo de lisina-AMP, polipeptídeos de lisina isolados, e composições farmacêuticas compreendendo os polipeptídeos isolados e/ou constructos de polipeptídeo de lisina-AMP. Métodos de usar os constructos de polipeptídeo de lisina-AMP, polipeptídeos de lisina isolados e composições farmacêuticas são também providos neste documento, incluindo métodos de tratar uma infecção bacteriana de um órgão ou tecido em que tensoativo pulmonar está presente ou infecções bacterianas Gram-negativas que estão associadas a um biofilme. Além disso, polinucleotídeos isolados que codificam os constructos de polipeptídeo de lisina-AMP e polipeptídeos de lisina isolados são divulgados neste documento.
+  Country: BR
+  Source: INPI
+  Publication No: None (Date: 09/03/2021)
+  Application No: BR 11 2020 018787 9 A2 (Filing Date: 23/08/2019)
+  Exam Pub Date: -
+  National Phase Start: 15/09/2020
+  Priorities:
+    - 62/860,836 13/06/2019 ESTADOS UNIDOS
+  Classifications:
+    - IPC A61K 38/16 1995.01 Preparações medicinais contendo peptídeos; / Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatostatinas; Melanotropinas; Seus derivados;
+    - IPC A61K 38/46 1995.01 Preparações medicinais contendo peptídeos; / Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatostatinas; Melanotropinas; Seus derivados; / Enzimas; Pró-enzimas; Seus derivados; / Hidrolases (3);
+    - IPC A61P 31/04 2000.01 Antiinfecciosos, i.e. antibióticos, antissépticos, quimioterapêuticos; / Agentes antibacterianos;
+    - IPC C07K 14/005 1995.01 Peptídeos tendo mais de 20 aminoácidos; Gastrinas; Somatoestatinas; Melanotropinas; Derivados dos mesmos; / de vírus;
+    - IPC C12N 15/62 1990.01 Mutação ou engenharia genética; DNA ou RNA concernentes à engenharia genética, vetores, p. ex. plasmídeos ou seu isolamento, preparação ou purificação; Uso de seus hospedeiros; / Tecnologia do DNA recombinante; / Fragmentos de DNA ou RNA; Suas formas modificadas; / Sequências de DNA que codificam proteínas de fusão;
+  Int. Applications:
+    - PCT US2019047916 23/08/2019 INPI
+    - W.O. 2020/046747 05/03/2020 WIPO
+  Parties:
+    - CONTRAFECT CORPORATION None Depositante
+    - Dannemann, Siemsen, Bigler & Ipanema Moreira None Procurador
+    - RAYMOND SCHUCH None Inventor  
+Patent
+  Title: ESTRUTURA PARA CADEIRA ODONTOLÓGICA PORTÁTIL E DOBRAVÉL
+  Abstract: ESTRUTURA PARA CADEIRA ODONTOLÓGICA PORTÁTIL E DOBRÁVEL. A presente Patente de Modelo de Utilidade refere-se a uma cadeira odontológica de proposta inovadora, sendo caracterizada por permitir a seu usuário ser dobrada e carregada para atendimentos externos, pois seu volume final dobrada é sensivelmente reduzido frente ao seu volume em uso, sem deixar de atender aos movimentos necessários de uma cadeira odontológica normal. A presente invenção é constituída basicamente de uma base(1) com pés reguláveis(2) ligada de forma pantográfica por diagonais(3) à estrutura do assento(4) provida de braços curvos e fixos(5) e mecanismo de extensão frontal descansa-pés(6) e ligada à estrutura do encosto(7) por meio de chave de regulagem(8).
+  Country: BR
+  Source: INPI
+  Publication No: None (Date: 21/03/2017)
+  Application No: BR 20 2015 022990 4 U2 (Filing Date: 13/09/2015)
+  Exam Pub Date: -
+  National Phase Start: None
+  Priorities:
+    - None
+  Classifications:
+    - IPC A61G 15/00 1968.09 Cadeiras cirúrgicas; Cadeiras de dentista; Acessórios especialmente adaptados para esse fim, p. ex. cavaletes para instrumentos;
+  Parties:
+    - MARCELO SCHETTINI DIAS DA COSTA None Depositante
+    - PEDROLINA ALMEIDA CARVALHO None Procurador
+    - MARCELO SCHETTINI DIAS DA COSTA None Inventor  
+Patent
+  Title: MÉTODO DE MOAGEM E MEIO DE MOAGEM
+  Abstract: MÉTODO DE MOAGEM E MEIO DE MOAGEM. A invenção refere-se a um método para fabricar celulose microfibrilada, um meio de moagem em partículas adequado para uso no dito método, um material que se desgasta ou se torna áspero e um método para produção do dito meio de moagem em partículas.
+  Country: BR
+  Source: INPI
+  Publication No: BR 11 2016 026678 1 B1 (Date: 15/08/2017)
+  Application No: None (Filing Date: 14/05/2015)
+  Exam Pub Date: 28/12/2021
+  National Phase Start: 14/11/2016
+  Priorities:
+    - 3 0 (
+  Classifications:
+    - IPC D21D 1/00 1968.09 Métodos de bater ou refinar; Batedeiras do tipo Hollander;
+    - IPC D21H 11/18 1990.01 Polpa ou papel, compreendendo fibras de celulose ou lignocelulose de origem natural apenas; / modificadas por pós-tratamento especial; / Fibras altamente hidratadas, aumentadas ou fibriláveis;
+  Int. Applications:
+    - PCT EP2015060724 14/05/2015 INPI
+    - W.O. 2015/173376 19/11/2015 WIPO
+  Parties:
+    - FIBERLEAN TECHNOLOGIES LIMITED None Titular
+    - DANNEMANN, SIEMSEN, BIGLER & IPANEMA MOREIRA None Procurador
+    - TAFADZWA MOTSI None Inventor
+    - DAVID ROBERT SKUSE None Inventor
+    - JEAN ANDRE ALARY None Inventor
+    - ANDREAS BORGER None Inventor
+    - NEIL ROWSON None Inventor
+    - THOMAS RICHARD SKUSE None Inventor  

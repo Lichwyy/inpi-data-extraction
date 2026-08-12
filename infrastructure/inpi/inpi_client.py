@@ -7,7 +7,10 @@ class INPIClient:
         self.login = LOGIN_INPI
         self.password = PASSWORD_INPI
         self.base_url = "https://busca.inpi.gov.br/pePI/"
+        
     
+    def refresh_session(self):
+        self.session = requests.Session()
     def authenticate(self):
         self.session.get(self.base_url)
         self.session.post(self.base_url+"servlet/LoginController",
@@ -19,6 +22,8 @@ class INPIClient:
                                 "Usuario": ""
                                 }
                             )
+        
+    
     def expired_session(self, response):
         return "anonimamente" in response
     

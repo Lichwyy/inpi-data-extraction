@@ -37,6 +37,30 @@ class Patent:
         self.classifications: List[Classification] = []
         self.international_applications: List[InternationalApplication] = []
         self.parties: List[Party] = [] 
+    
+    def __str__(self):
+        info = (
+            f"Patent\n"
+            f"  Title: {self.title}\n"
+            f"  Abstract: {self.abstract}\n"
+            f"  Country: {self.country}\n"
+            f"  Source: {self.source}\n"
+            f"  Publication No: {self.publication_number} (Date: {self.publication_date})\n"
+            f"  Application No: {self.application_number} (Filing Date: {self.filing_date})\n"
+            f"  Exam Pub Date: {self.examination_publication_date}\n"
+            f"  National Phase Start: {self.national_phase_start_date}\n"
+        )
+        
+        if self.priorities:
+            info += "  Priorities:\n" + "\n".join(f"    - {p}" for p in self.priorities) + "\n"
+        if self.classifications:
+            info += "  Classifications:\n" + "\n".join(f"    - {c}" for c in self.classifications) + "\n"
+        if self.international_applications:
+            info += "  Int. Applications:\n" + "\n".join(f"    - {i}" for i in self.international_applications) + "\n"
+        if self.parties:
+            info += "  Parties:\n" + "\n".join(f"    - {p}" for p in self.parties) + "\n"
+            
+        return info.strip()
 
 
 class Priority:
@@ -55,6 +79,8 @@ class Priority:
         self.date = date
         self.country = country
 
+    def __str__(self):
+        return f"{self.number} {self.date} {self.country}"
 class Classification:
     """
     Represents a patent classification (IPC, CPC, national, etc).
@@ -71,7 +97,9 @@ class Classification:
         self.code = code
         self.year = year
         self.description = description
-
+        
+    def __str__(self):
+        return f"{self.system} {self.code} {self.year} {self.description}"
 
 class InternationalApplication:
     """
@@ -90,6 +118,9 @@ class InternationalApplication:
         self.number = number
         self.date = date
         self.authority = authority
+    
+    def __str__(self):
+        return f"{self.application_type} {self.number} {self.date} {self.authority}"
 
 
 class Party:
@@ -107,3 +138,6 @@ class Party:
         self.name = name
         self.country = country
         self.role = role
+
+    def __str__(self):
+        return f"{self.name} {self.country} {self.role}"
